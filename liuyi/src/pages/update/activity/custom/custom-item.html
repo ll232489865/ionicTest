@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            添加自定义项目
+        </ion-title>
+
+        <ion-buttons end small>
+            <button ion-button class="font-size" (click)="onSubmit()">
+                确认
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-item>
+        <ion-label>
+            请输入项目名称
+        </ion-label>
+        <ion-input type="text" value="" fixed placeholder="请填写内容" text-right></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>
+            请输入项目内容
+        </ion-label>
+        <ion-input type="text" value="" fixed placeholder="请填写内容" text-right></ion-input>
+    </ion-item>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            添加活动
+        </ion-title>
+
+        <ion-buttons end small>
+            <button ion-button class="font-size" (click)="onSubmit()">
+                确认
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let item of activityImage" width-25 (click)="onImageClick(item)">
+                <img src={{item.image}} alt="">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-list>
+        <button ion-item (click)="onActivityType()">
+            活动类型
+            <ion-note item-right >{{_params}}</ion-note>
+        </button>
+
+        <ion-item>
+            <ion-label>
+                活动标题
+            </ion-label>
+            <ion-input type="text" value="" fixed placeholder="请填写内容" text-right></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                活动简介
+            </ion-label>
+            <ion-input type="text" value="" fixed placeholder="请填写内容" text-right></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                活动时间
+            </ion-label>
+            <ion-input type="text" value="" fixed placeholder="请填写内容" text-right></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                活动地点
+            </ion-label>
+            <ion-input type="text" value="" fixed placeholder="请填写内容" text-right></ion-input>
+        </ion-item>
+        <button ion-item (click)="onCustomItem()">
+            添加自定义项目
+            <div item-right>
+            </div>
+        </button>
+    </ion-list>
+</ion-content>

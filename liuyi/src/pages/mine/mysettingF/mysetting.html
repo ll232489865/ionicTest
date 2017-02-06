@@ -1,0 +1,38 @@
+      <link href="assets/source/css/default.css" rel="stylesheet">
+<link href="assets/source/css/mui.min.css" rel="stylesheet">
+ 
+ 
+  <ion-header>
+  <ion-navbar>
+    <ion-title>
+      账户
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+
+        <div class="mui-content bgwh">
+            <div class="Line"></div>
+            <div class="pct95 auto">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">
+                        <a class="mui-navigate-right" id="profile" style="padding-left: 10px;" tappable (click)="_enterInfo()">
+                            个人资料
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <a class="mui-navigate-right" id="feedback" style="padding-left: 10px;">
+                        反馈建议
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div style="position: absolute; left: 0; bottom: 50px; width: 80%; margin-left: 10%; text-align: center;">
+            <span class="Btn Btn_middle Btn_white Btn_radiusI" id="quit_app" tappable (click)="_quitApp()">退出登录</span>
+        </div>
+
+</ion-content>

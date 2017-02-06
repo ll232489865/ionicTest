@@ -1,0 +1,14 @@
+
+<div style="height: 100%; width: 100%; background: rgba(0,0,0,.7);text-align: center;" (click) = "dismiss()">
+    <div style="display:inline-block; vertical-align: middle; background: #fff; width: 70%; shadow: 0 0 5px rgba(0,0,5px,#000)" (click)= "stopPropagation($event)">
+        <ion-slides pager [options]="options">
+            <ion-slide *ngFor="let slide of slides">
+                <img [src]="slide.image" class="slide-image"/>
+                <h3 class="slide-title" [innerHTML]="slide.title"></h3>
+                <div [innerHTML]="slide.description" style="text-align: left; font-size: 1em; padding: 0 10px; margin-bottom: 50px;"></div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <span style="display: inline-block; height: 100%; width: 0; overflow: hidden; vertical-align: middle">
+    </span>
+</div>

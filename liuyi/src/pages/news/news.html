@@ -1,0 +1,35 @@
+<ion-content class="tutorial-page">
+  <div>
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image" tappable (click)="bannerClick()"/>
+    </ion-slide>
+  </ion-slides>
+  </div>
+  <ion-item>
+    <!--<div>-->
+      <span style="float: left">最新新闻</span>
+      <span style="float: right;font-size: 0.7em;color: #022246">更多</span>
+    <!--</div>-->
+  </ion-item>
+
+  <ion-list>
+  <ion-item *ngFor="let item of avatarList" (click)="clickAvatarList()">
+    <ion-avatar  item-left>
+      <img [src]=item.image style="border-radius: 0;width:50px">
+    </ion-avatar>
+    <div>
+      <span style="font-size: 13px;width: 150px;">2016年祭孔大典孔总.....</span>
+      <ion-icon name="star"></ion-icon>
+      <span style="font-size: 0.8em;color: #022246; float: right;margin-top: 6px">520</span>
+    </div>
+    <ion-title >
+      <div style="text-align: left">
+        <span *ngFor="let item of titleArr" class="title-style" style="margin: 0px 3px 0px 0px" >
+            {{item}}
+      </span>
+      </div>
+  </ion-title>
+  </ion-item>
+</ion-list>
+</ion-content>

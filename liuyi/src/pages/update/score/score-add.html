@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            添加成绩
+        </ion-title>
+
+        <ion-buttons end small>
+            <button ion-button class="font-size" (click)="onSubmit()">
+                确认
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of subjectItem">
+            <ion-label>
+                {{item.subject}}
+            </ion-label>
+            <ion-input type="text" value="" required [(ngModel)]="item.score" fixed placeholder="输入分值" text-right>{{item.score}}</ion-input>
+
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-item class="bottom-item" no-lines>
+            <ion-label>
+                总分值
+            </ion-label>
+            <ion-note item-right>
+                分值
+            </ion-note>
+        </ion-item>
+    </ion-toolbar>
+</ion-footer>

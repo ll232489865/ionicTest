@@ -1,0 +1,26 @@
+page-update {
+    .font-size{
+        font-size: 14px;
+    }
+
+    .list-top {
+        height: 10px;
+        background-color: #eeeeee;
+    }
+
+    .list-item-bottom-line {
+        border-bottom: 0.55px solid #c8c7cc;
+    }
+
+    .list-ios .item-block .item-inner {
+        border-bottom: 0;
+    }
+
+    .item-md ion-avatar ion-img, .item-md ion-avatar img {
+        border-radius: 0;
+    }
+
+    .item-ios ion-avatar img {
+        border-radius: 0;
+    }
+}

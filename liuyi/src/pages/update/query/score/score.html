@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            所有成绩
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item-group *ngFor="let item of subjectItem" class="item_bottom">
+        <ion-item-divider color="light">
+            {{item.data}}
+            <ion-note item-right>
+                总分值:{{item.score}}
+            </ion-note>
+        </ion-item-divider>
+
+        <!--<ion-grid>-->
+        <ion-row>
+            <ion-col *ngFor="let subject of item.detail" center>
+                {{subject.subject}}:{{subject.score}}
+            </ion-col>
+        </ion-row>
+        <!--</ion-grid>-->
+    </ion-item-group>
+</ion-content>

@@ -1,0 +1,32 @@
+<style>
+  .bg-icon{
+    font-size:1.5em
+  }
+  .bg-content{
+    background: linear-gradient(110deg, #739bfa, #59cade); /* 标准的语法 */
+    /*background: -webkit-linear-gradient(left, red , blue); !* Safari 5.1 - 6.0 *!*/
+  }
+</style>
+<ion-header>
+  <ion-navbar>
+    <ion-icon name="arrow-dropleft" class="bg-icon"></ion-icon>
+    <ion-title style="text-align: center">
+      {{courseName}}历史成绩
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="grid-basic-page bg-content">
+  <ion-grid class="bg-button">
+    <ion-row class="custom-row">
+      <ion-col width-9 *ngFor="let tabName of tabNameArr;let _index=index" (click)="cutCourse(_index)" tappable>
+        <span>{{tabName}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-scroll scrollX="true" class="barGraph">
+    <div id="courseScore" class="courseScore"></div>
+  </ion-scroll>
+
+</ion-content>

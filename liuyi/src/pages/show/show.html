@@ -1,0 +1,48 @@
+<ion-content #mycontent padding  #text style="background: -webkit-linear-gradient(-45deg, #739BFA, #59CADE) ;">
+    <!--<button ion-button block  (click) = "goCHatUi()">按钮</button>-->
+    <div style="height: 3%;"></div>
+    <div id="radar" style="height: 45%; width: 90%; margin: 40px auto; position: relative;">
+      
+    </div>
+    <ion-grid>
+        <ion-row style="text-align: center">
+            <ion-col width-2>
+                <!--menuToggle-->
+                <span class="btn btn_opa btn_middle" (click) = "presentProfileModal() ">
+                    晒成绩
+                    <span class="icon-chain" style="color: #fff; font-size: 1.3em"></span>
+                </span>
+                <!--<button ion-button small  color = "light" (click) = "presentProfileModal() "> 
+                    晒成绩
+                    <ion-icon name="ios-clock" color="danger"></ion-icon>
+                </button>-->
+            </ion-col>
+            <ion-col width-2>
+                <!--<button ion-button small color="light" >
+                    看历史
+                    <ion-icon name="ios-clock" color="danger"></ion-icon>
+                </button>-->
+                <!--<button ion-button [navPush]="historycourse" [navParams]="params">
+
+                </button>-->
+                <span class="btn btn_opa btn_middle" (click)="historyCourse()">
+                    看历史
+                    <span class="icon-record" style="color: #fff"></span>
+                </span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <dl style="color: #fff; line-height: 180%; text-shadow: 1px 1px .5px #666">
+        <dd>去增加课程提高成绩</dd>
+        <dd>去增加活动提高成绩</dd>
+        <dd>去参加调查问卷增加成绩</dd>
+    </dl>
+    <ion-menu [content]="mycontent" type="overlay" side="bottom">
+        <ion-content>
+            <ion-list>
+                hahaha
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+</ion-content>
+

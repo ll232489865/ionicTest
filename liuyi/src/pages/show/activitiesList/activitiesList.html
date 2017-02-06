@@ -1,0 +1,46 @@
+<style>
+  .bg-icon{
+    font-size:1.5em
+  }
+
+</style>
+
+<ion-header>
+  <ion-navbar>
+    <!--<ion-icon name="arrow-dropleft" class="bg-icon"></ion-icon>-->
+    <ion-title style="text-align: center">
+      课程和活动列表
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="grid-basic-page list-avatar-page">
+  <ion-grid class="bg-button">
+    <ion-row class="custom-row">
+      <ion-col width-9 *ngFor="let tabName of tabNameArr; let _index=index;" (click)="cutCourse(_index)" tappable>
+        {{tabName}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list *ngFor="let activity of activityArr" class="custom-ion-list">
+
+    <ion-item>
+      <p class="titleName">课程名称: &nbsp;</p><p>{{activity.course.courseName}}</p>
+      <br>
+      <p class="titleName">分值: &nbsp;</p><p style="display: inline-block;">{{activity.course.courseScore}}</p>
+      <p class="activeTime">{{activity.course.courseTime}}</p>
+    </ion-item>
+
+    <ion-item>
+      <p class="titleName">活动名称: &nbsp;</p><p>{{activity.active.activeName}}</p>
+      <br>
+      <p class="titleName">分值: &nbsp;</p><p style="display: inline-block;">{{activity.active.activeScore}}</p>
+      <p class="activeTime">{{activity.active.activeTime}}</p>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+

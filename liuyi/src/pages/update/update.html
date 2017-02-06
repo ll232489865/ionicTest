@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title center>
+            添加
+        </ion-title>
+
+        <ion-buttons end small>
+            <button ion-button class="font-size" (click)="onScoreDetail()">
+                查询
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <div class="list-top">
+    </div>
+    <ion-list>
+        <ion-item class="list-item-bottom-line" (click)="onActivity()">
+            <ion-avatar item-left >
+                <img src="assets/img/avatar-ts-jessie.png" alt="img-header">
+            </ion-avatar>
+            添加活动
+        </ion-item>
+        <ion-item  class="list-item-bottom-line" (click)="onScoreAdd()">
+            <ion-avatar item-left>
+                <img src="assets/img/avatar-ts-potatohead.png" alt="img-header">
+            </ion-avatar>
+            添加成绩
+        </ion-item>
+        <ion-item (click)="onSelfAssessing()">
+            <ion-avatar item-left>
+                <img src="assets/img/avatar-ts-rex.png" alt="img-header">
+            </ion-avatar>
+            自我测评
+        </ion-item>
+    </ion-list>
+</ion-content>

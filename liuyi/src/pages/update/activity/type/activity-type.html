@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            添加活动类型
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <button ion-item *ngFor="let item of activityType" (click)="onTypeClick(item)">
+            <ion-label>
+                {{item.title}}
+            </ion-label>
+            <ion-note item-right>
+                {{item.type}}
+            </ion-note>
+        </button>
+
+    </ion-list>
+</ion-content>

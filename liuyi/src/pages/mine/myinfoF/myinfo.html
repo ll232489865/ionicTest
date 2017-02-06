@@ -1,0 +1,72 @@
+      <link href="assets/source/css/default.css" rel="stylesheet">
+<link href="assets/source/css/mui.min.css" rel="stylesheet">
+
+ 
+    <style>
+        .userimg {
+            margin-top: -20px;
+            margin-right: -20px;
+        }
+        
+        .importStyle {
+            border-color: #999 !important;
+            color: #999 !important;
+        }
+    </style>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      账户
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+
+    <div class="mui-content bgwh">
+            <div class="Line"></div>
+            <div class="pct95 auto">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell" id="head-hotpost">
+                        <div class="mui-navigate" style="margin-left: 10px;">头像</div>
+
+                        <span class="List_abs">
+                            <!--<img src="../img/account-picture.png" class="res_icon" id="res_icon" alt="" />-->
+                            <img  [src]="loadImage" class="head-img mui-action-preview res_icon" id="head-img1" style="margin-right: 10px" tappable (click)="uploadImage()"/>
+                            <input type="hidden" id="avatarUrl" />
+                            <input type="hidden" id="qiniuFileName" />
+                            <input type="hidden" id="fileName" />
+                        </span>
+                    </li>
+                    <li class="mui-table-view-cell" id="nkname-hotpost">
+                        <div class="List_abs List_control" style="margin-top: .7rem;">
+                            <div class="g9">
+                                <input type="text" id="nicknm" maxlength="11" class="tr res_input" value={{loadNickName}} style="margin-right: 10px;border: 0;margin-top: -12px;padding-bottom: 8px;">
+                            </div>
+                        </div>
+
+                        <div class="mui-navigate" style="margin-left: 10px;">昵称</div>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <div class="mui-navigate" style="margin-left: 10px">性别</div>
+                        <span class="List_abs" id="gndr" style="top: 0;">
+                            <span class="dib sp_sex " title="1" id="sp_man">
+                                <i><div class="u1 u161 userimg"></div></i>
+                            </span>
+                        <span class="dib sp_sex" title="0" id="sp_weman">
+                                <i><div class="u1 u171 userimg"></div></i>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="pct80 auto">
+                    <div style="margin-top: 4rem;">
+                        <span class="Btn Btn_middle Btn_white Btn_radiusI importStyle" id="save">保存</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</ion-content>
